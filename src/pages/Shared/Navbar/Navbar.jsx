@@ -1,12 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import logo from '../../../assets/logo.png'
-import { useContext } from "react";
-import { AuthContext } from "../../../providers/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useAuth()
+    // const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
         logOut()
